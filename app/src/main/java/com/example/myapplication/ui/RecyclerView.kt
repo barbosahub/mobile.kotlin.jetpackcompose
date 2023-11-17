@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import coil.compose.AsyncImage
-import com.example.myapplication.ui.home.view.model.PhotoJson
+import com.example.myapplication.data.remote.responses.PhotoJson
 
 @Composable
 fun MyRecyclerView(

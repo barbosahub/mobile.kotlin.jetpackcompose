@@ -98,6 +98,18 @@ dependencies {
 
 
 
+    // LEO IMPLEMENTACOES
+
+    // Navigation
+    val nav_version = "2.7.5"
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+
+    // Dependency Injection with compose
+
+
+    implementation ("io.insert-koin:koin-androidx-compose:3.5.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

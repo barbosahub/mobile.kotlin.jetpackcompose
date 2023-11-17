@@ -1,4 +1,4 @@
-package com.example.myapplication.network
+package com.example.myapplication.data.remote
 
 import com.google.gson.GsonBuilder
 import okhttp3.Interceptor

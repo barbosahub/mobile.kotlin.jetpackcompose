@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.home.view.model
+package com.example.myapplication.data.remote.responses
 
 import org.json.JSONObject
 import java.io.Serializable
