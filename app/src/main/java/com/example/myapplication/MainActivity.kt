@@ -1,14 +1,9 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 
@@ -17,12 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.myapplication.albumlist.AlbumListScreen
+import com.example.myapplication.presentation.photoslist.AlbumListScreen
+import com.example.myapplication.presentation.photoslist.PhotosListState
 
-import com.example.myapplication.albumlist.AlbumsViewModel
+import com.example.myapplication.presentation.photoslist.PhotosViewModel
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import org.koin.androidx.compose.koinViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,8 +31,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val navController = rememberNavController()
 
-                    val viewModel = koinViewModel<AlbumsViewModel>()
-                    val uiState = viewModel.uiState.value
+                    val viewModel = koinViewModel<PhotosViewModel>()
+                    val photosListState = viewModel.photosListState
 
 
                     NavHost(
@@ -45,7 +40,7 @@ class MainActivity : ComponentActivity() {
                         startDestination = "albums") {
 
                         composable("albums") {
-                            AlbumListScreen(uiState = uiState)
+                            AlbumListScreen(photosListState = photosListState)
                         }
 
                     }

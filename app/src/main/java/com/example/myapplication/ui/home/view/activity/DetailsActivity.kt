@@ -1,32 +1,7 @@
 package com.example.myapplication.ui.home.view.activity
 
-import android.os.Bundle
-import android.widget.Toast
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.unit.dp
-import androidx.constraintlayout.compose.ConstraintLayout
-import coil.compose.AsyncImage
-import com.example.myapplication.ui.MyTopAppBar
-import com.example.myapplication.ui.ProgressBar
-import com.example.myapplication.albumlist.AlbumsViewModel
-import com.example.myapplication.ui.theme.MyApplicationTheme
-import org.koin.androidx.viewmodel.ext.android.viewModel
-
 //class DetailsActivity : ComponentActivity() {
-//    private val viewModel: AlbumsViewModel by viewModel()
+//    private val viewModel: PhotosViewModel by viewModel()
 //    private var url = ""
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)

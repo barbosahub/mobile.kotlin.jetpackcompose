@@ -1,4 +1,4 @@
-package com.example.myapplication.albumlist
+package com.example.myapplication.presentation.photoslist
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
@@ -12,27 +12,26 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.myapplication.state.UiState
 
 @Composable
 fun AlbumListScreen(
-    uiState: UiState
+    photosListState:PhotosListState
 ){
   Box(
       modifier = Modifier.fillMaxSize(),
       contentAlignment = Alignment.Center
       ){
           LazyColumn(modifier = Modifier.fillMaxSize()){
-              items(uiState.items.size){
+              items(photosListState.photosList.size){
                   Text(
-                      text = uiState.items[it].title,
+                      text = photosListState.photosList[it].title,
                       color = Color.Green
                   )
                   Spacer(modifier = Modifier.size(10.dp))
               }
       }
 
-      if (uiState.isLoading){
+      if (photosListState.isLoading){
           CircularProgressIndicator()
       } 
 
